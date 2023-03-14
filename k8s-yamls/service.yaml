@@ -1,0 +1,13 @@
+# service type loadbalancer       
+apiVersion: v1
+kind: Service
+metadata:
+  name: techmax-website-service
+spec:
+  selector:
+    app: techmax-website
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
