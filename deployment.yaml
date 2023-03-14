@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: techmax-website-deployment
+  labels:
+    app: techmax-website
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: techmax-website
+  template:
+    metadata:
+      labels:
+        app: techmax-website
+    spec:
+      containers:
+      - name: techmax-website
+        image: kunal2699/techmaxwebsite:v1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
