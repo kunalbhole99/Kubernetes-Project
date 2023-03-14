@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: techmax-website
-        image: kunal2699/techmaxwebsite:v2
+        image: kunal2699/techmaxwebsite:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
